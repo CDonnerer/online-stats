@@ -3,8 +3,7 @@ online-stats
 ============
 
 
-Add a short description here!
-
+Compute statistics of data online, streamed from files
 
 Description
 ===========
