@@ -30,17 +30,17 @@ class OnlineMean(BaseOnlineStats):
         return self._sum / self._n
 
 
-class OnlineVar(BaseOnlineStats):
+class OnlineVar(OnlineMean):
     def __init__(self):
-        self.online_mean = OnlineMean()
+        super().__init__()
         self._sum_squared_diff = 0.0
 
     def fit(self, X):
-        self.online_mean.fit(X)
-        current_mean = self.online_mean.get()
+        super().fit(X)
+        current_mean = super().get()
         squared_diff = (X - current_mean) ** 2
         self._sum_squared_diff += squared_diff
 
     def get(self):
-        n = self.online_mean.n
+        n = super().n
         return float(1.0 / (n - 1)) * self._sum_squared_diff

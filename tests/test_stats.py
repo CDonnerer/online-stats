@@ -15,12 +15,12 @@ def random_num_gen():
 
 
 def test_OnlineMean(random_num_gen):
-    om = OnlineMean()
+    o_m = OnlineMean()
 
     for number in random_num_gen:
-        om.fit(number)
+        o_m.fit(number)
 
-    np.testing.assert_approx_equal(om.get(), 1, significant=2)
+    np.testing.assert_approx_equal(o_m.get(), 1, significant=2)
 
 
 def test_OnlineVar(random_num_gen):
