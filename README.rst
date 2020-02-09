@@ -1,14 +1,8 @@
-============
 online-stats
 ============
 
 
-Compute statistics of data online, streamed from files
-
-Description
-===========
-
-A longer description of your project goes here...
+Compute statistics of data online, directly streamed from files
 
 
 Note
